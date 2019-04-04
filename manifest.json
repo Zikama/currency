@@ -1,0 +1,11 @@
+{
+  "name": "Currency-converter",
+  "scope": "./",
+  "icons": [{
+    "src": "./assets/imgs/logo.png",
+    "sizes": "600x600"
+  }],
+  "background_color": "#cececeaf",
+  "display": "standalone",
+  "start_url": "./"
+}

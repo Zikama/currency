@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="content-language" content="en" />
+    <meta name="author" lang="en" content="Nehemie Zikama" />
+    <meta name="copyright" lang="en" content="2019" />
+    <meta name="description" content="Free Currency Converter  web service to convert one currency to another. Conversion activities are being stored in IndexedDb for later use" />
+    <meta name="keywords" content="currency exchange rates, foreign exchange, currency converter, free, web service" />
+    <meta name="theme-color" content="rgb(5, 54, 74)" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Currency Converter</title>
+    <link href='https://github.com/zikama' rel='author'/>
+    <link rel="icon"href="./assets/imgs/logo.png">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="manifest"href="./manifest.json">
+    <script src="./assets/js/numeral.min.js"></script>
+  </head>
+  <body>
+    <nav id="nav-ba"class="navba">
+      <p>
+        <img src="./assets/imgs/logo.png" class="logo">
+        Currency Converter
+      </p>
+
+      <div class="menu">
+        <svg id="menu_humberg" class="gb_he" focusable="false" viewBox="0 0 19 19">
+          <path d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z"></path>
+        </svg>
+      </div>
+
+      <div class="card_f">
+        <p>Currencies To Convert</p>
+        <span id="currenciesToC">
+          <input type="button" class="bloc" readonly onclick="applyPopV(event)" value="UGX">
+          <input type="button" class="bloc" readonly onclick="applyPopV(event)" value="CDF">
+          <input type="button" class="bloc" readonly onclick="applyPopV(event)" value="RWF">
+          <input type="button" class="bloc" readonly onclick="applyPopV(event)" value="USD">
+          <input type="button" class="bloc" readonly onclick="applyPopV(event)" value="PHP">
+          <input type="button" class="bloc" readonly onclick="applyPopV(event)" value="EUR">
+        </span>
+
+      </div>
+    </nav>
+    <main class="row">
+      <section>
+
+        <article class="recent1">
+          <div class="m_h"><h1>Recent activities</h1> <button class="m_h_mo">...</button></div>
+          <input type="search" name="search-activity" id="searchActivity" placeholder="Search Activity" class="s-input">
+          <div id="acts" class="s-container"></div>
+        </article>
+
+        <article class="form">
+          <div class="m_h"><h1>Calculate and Convert</h1> <button class="m_h_mo">...</button></div>
+          <form class="m"name="calc">
+
+            <input type="text" name="currencyFromValue" id="currencyFromValue" placeholder="Enter amount" />
+
+            <select id="currency_Fr" NAME="currenciesFROM" class="currency postfix"></select>
+
+            <div class="digs">
+              <div class="btn-num-container">               
+                <button type="button" class="btn-num" onclick="writer(data='1')" id="add1">1</button>
+                <button type="button" class="btn-num" onclick="writer(data='2')" id="add2">2</button>
+                <button type="button" class="btn-num" onclick="writer(data='3')" id="add3">3</button>
+                <button type="button" class="btn-num" onclick="writer(data='4')" id="add4">4</button>
+                <button type="button" class="btn-num" onclick="writer(data='5')" id="add5">5</button>
+                <button type="button" class="btn-num" onclick="writer(data='6')" id="add6">6</button>
+                <button type="button" class="btn-num" onclick="writer(data='7')" id="add7">7</button>
+                <button type="button" class="btn-num" onclick="writer(data='8')" id="add8">8</button>
+                <button type="button" class="btn-num" onclick="writer(data='9')" id="add9">9</button>
+                <button type="button"  class="btn-num btn-dot" onclick='v(".")' >.</button>
+                <button type="button" class="btn-num" onclick="writer(data='0')" id="add0">0</button>
+                <button type="button"  class="btn-num" onclick='""' >C</button>
+              </div>
+
+              <div class="sign-btn-container" >
+                <input type="button" class="sign-btn sign-delete" value="D" onclick='f("D")'/>
+                <input type="button" class="sign-btn" onclick="writer(data='+')" id="add_pls" value="+"/>
+                <input type="button" class="sign-btn" onclick="writer(data='-')" id="add_"    value="-"/>
+                <input type="button" class="sign-btn" onclick="writer(data='x')" id="add_m"   value="x"/>
+                <input type="button" class="sign-btn" onclick="writer(data='/')" id="add_div" value="/"/>
+                <input type="button" class="sign-btn" onclick="writer(data='%')" id="add_mo"  value="%"/>
+                <input type="button" class="sign-btn sign-equal" value="=" onclick="e()"/>
+              </div> 
+            </div>
+
+            <select name="currenciesTO" id="currency_To" class="currency postfix"></select>
+            <div class="extra">
+              <span class="">
+                <input type="text" id="currency_Val" readonly="" placeholder="#Results" class="cls">
+                <span id="IntoConnverted"></span>
+              </span>
+              <span class="">
+                <button id="convt" >Convert</button>
+                <button id="save" type="hidden" >Save</button>
+              </span>
+            </div>
+          </form>
+        </article>
+
+        <article class="recent2">
+          <div class="m_h"><h1>Settings</h1> <button class="m_h_mo">...</button></div>
+          <div id="update-message"class="recent">
+            <div class="details">
+              <h1>About</h1>
+              <p>
+                Proudly developed by Nehemie Zikama,   All credits goes to Andela, Udacity and Google for such big opportunity they offered to me, I'm grateful to say a BIG thank you for such an Amazing opportunity, Live <a class="link" href="https://andela.com">Andela</a>,<a class="link" href="https://udacity.com">Udacity </a>and <a class="link" href="https://google.com">Google</a>, GoogleAfricaChallenge, GroWithGoogle,AlcWithgoogle3.0,MWS-Nanodegree .<br>
+                <h2>Contact :</h2>
+                If you would like to get in touch with me, you can contact me on the following Email Address and Phone Number: <br>
+                <p style="margin: 0; font-weight:bold;width:100%;text-align: left;">Gmail : <a class="link" href="mailto:nehemiezikama@gmail.com">@nehemiezikama</a></p>
+                <p style="margin: 0; font-weight:bold;width:100%;text-align: left;">Github : <a class="link" target="_blank" href="https://github.com/zikama">@Zikama</a></p>
+                <p style="margin: 0; font-weight:bold;width:100%;text-align: left;">Tel : <a class="link" target="_blank" href="tel:+256791676272"> +(256) 079 167 6272 </a></p>
+
+                <a class="link" href="mailto:nehemiezikama@gmail.com"><h4>Hire me</h4></a>
+            </div>
+        </div>
+        </article>
+
+      </section>
+    </main>
+
+    <script src="./assets/controller/controller.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/search-content.js"></script>
+    <script src="./assets/js/index.js"></script>
+    <script>
+    
+    </script>
+  </body>
+</html>
