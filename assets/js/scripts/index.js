@@ -118,7 +118,7 @@ if('serviceWorker' in navigator){
          `<input type="button" class="bloc" readonly onclick="applyPopV(event)" value="${allCurrencies[i]}">`
       }
 
-    fetch("./assets/data/currencies.json").then(data=>{
+    fetch("../data/currencies.json").then(data=>{
       return data.text()
     })
     .then(data =>{
