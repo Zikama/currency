@@ -112,8 +112,8 @@ if('serviceWorker' in navigator){
     function populateList() {
 
       for(let i=0; i<allCurrencies.length; i++){
-        document.calc.currenciesFROM.options[i]=new Option("",allCurrencies[i] );
-        document.calc.currenciesTO.options[i]=new Option("",allCurrencies[i] );
+        document.calc.currenciesFROM.options[i]=new Option(allCurrencies[i],allCurrencies[i] );
+        document.calc.currenciesTO.options[i]=new Option(allCurrencies[i] ,allCurrencies[i] );
         g("#currenciesToC").innerHTML += 
          `<input type="button" class="bloc" readonly onclick="applyPopV(event)" value="${allCurrencies[i]}">`
       }
