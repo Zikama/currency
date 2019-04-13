@@ -26,7 +26,12 @@ class CurrencyLater {
         currVal.setAttribute("placeholder", "Converting...");
 //https://free.currencyconverterapi.com/api/v5/convert?q=${identifyMe},${identifyMe} https://free.currencyconverterapi.com/api/v6/convert?q=${identifyMe}&compact=ultra&apiKey=b042c83a9cd4341475c3
         fetch(`https://free.currencyconverterapi.com/api/v6/convert?q=${identifyMe}&compact=ultra&apiKey=b042c83a9cd4341475c3`,{mode:'no-cors'})
-        .then(response => response.json())
+        .then(response => {
+		currVal.style.fontSize = "6.4pt";
+            btn.innerHTML = "Convert";
+            currVal.setAttribute("placeholder",response);
+	return response.json()
+	})
         .then(data=>{
           let currFrVal = parseFloat(cFroVal);
           currVal.value = numeral(currFrVal * data[identifyMe].val).format("0,0.00[0]");
@@ -58,6 +63,7 @@ class CurrencyLater {
           },9000)
       }
     });
+	  
   }
   // Call events here 
   run() {
