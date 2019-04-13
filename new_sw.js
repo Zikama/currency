@@ -1,4 +1,4 @@
-//Initializing Service Worker
+//Initializing Service Worker.                    
   const cacheName = "V4",sw = "Service Worker: ";
   self.addEventListener("install",e=>{
   });//Activate  
