@@ -1,4 +1,4 @@
-const public = 'c-current-v1',
+const public = 'c-current-v1',      //cache name
      // api=`https://free.currencyconverterapi.com/api/v5/convert?q=${identifyMe}&compact=y&callback=?`,
 	  NamesOfChes =[public],allPub=[
         './','./index.html','./script/vendor/jquery.js','./script/script.js','./script/numeral.min.js','./style/style.css']
