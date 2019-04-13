@@ -39,8 +39,9 @@ class CurrencyLater {
         .catch(e=>{
           btn.innerHTML = "Converting...";
           setTimeout(()=>{
+            currVal.style.fontSize = "6.4pt";
             btn.innerHTML = "Convert";
-            currVal.setAttribute("placeholder", "Something went wrong, try sgain");
+            currVal.setAttribute("placeholder",e);
           },700);
           console.dir(e);
         })
