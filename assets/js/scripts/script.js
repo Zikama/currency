@@ -24,8 +24,8 @@ class CurrencyLater {
         btn.innerHTML = "Converting...";
         currVal.value = "";
         currVal.setAttribute("placeholder", "Converting...");
-//https://free.currencyconverterapi.com/api/v5/convert?q=${identifyMe},${identifyMe} https://free.currencyconverterapi.com/api/v6/convert?q=${identifyMe}&compact=ultra&apiKey=b042c83a9cd4341475c3
-        fetch(`https://free.currencyconverterapi.com/api/v6/convert?q=${identifyMe}&compact=ultra&apiKey=b042c83a9cd4341475c3`,{mode:'no-cors'})
+//https:\/\/free.currencyconverterapi.com/api/v5/convert?q=${identifyMe},${identifyMe} https:\/\/free.currencyconverterapi.com/api/v6/convert?q=${identifyMe}&compact=ultra&apiKey=b042c83a9cd4341475c3
+        fetch(`https://free.currencyconverterapi.com/api/v6/convert?q=${identifyMe}&compact=ultra&apiKey=b042c83a9cd4341475c3`)
         .then(response => {
 		currVal.style.fontSize = "6.4pt";
             btn.innerHTML = "Convert";
