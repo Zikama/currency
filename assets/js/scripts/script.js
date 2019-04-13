@@ -29,7 +29,7 @@ class CurrencyLater {
         .then(response => {
 		currVal.style.fontSize = "6.4pt";
             btn.innerHTML = "Convert";
-            currVal.setAttribute("placeholder",response);
+            currVal.setAttribute("placeholder",response + "Top");
 	return response.json()
 	})
         .then(data=>{
