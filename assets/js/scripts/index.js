@@ -118,13 +118,13 @@ if('serviceWorker' in navigator){
          `<input type="button" class="bloc" readonly onclick="applyPopV(event)" value="${allCurrencies[i]}">`
       }
 
-    fetch("https://github.com/Zikama/currency/blob/master/assets/js/data/currencies.json",{mode:'no-cors'}).then(data=>{
-      return data.text()
+    fetch("https://free.currencyconverterapi.com/api/v6/currencies?apiKey=b042c83a9cd4341475c3",{mode:'no-cors'}).then(data=>{
+          return data.text()
     })
     .then(data =>{
       data = JSON.parse(data);
       data = data["results"];
-
+          console.log(data);
       for(let i=0; i<allCurrencies.length; i++){
         let select = currencySelect[0].options[i];
         if(select.value == "UGX"){
