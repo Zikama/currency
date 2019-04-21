@@ -3,8 +3,8 @@
   "short_name": "Converter",
   "start_url": "./",
   "icons": [{
-    "src": "./assets/imgs/logo-s.png",
-    "sizes": "99x99"
+    "src": "./assets/imgs/logo-m.png",
+    "sizes": "512x512"
   }],
   "background_color": "#cecece",
   "theme_color":"rgb(5, 54, 74)",
