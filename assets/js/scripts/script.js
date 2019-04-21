@@ -24,19 +24,21 @@ class CurrencyLater {
         btn.innerHTML = "Converting...";
         currVal.value = "";
         currVal.setAttribute("placeholder", "Converting...");
-//https:\/\/free.currencyconverterapi.com/api/v5/convert?q=${identifyMe},${identifyMe} https:\/\/free.currencyconverterapi.com/api/v6/convert?q=${identifyMe}&compact=ultra&apiKey=b042c83a9cd4341475c3
         fetch(`https://free.currencyconverterapi.com/api/v6/convert?q=${identifyMe}&compact=ultra&apiKey=b042c83a9cd4341475c3`)
         .then(response => {
-		currVal.style.fontSize = "6.4pt";
-            btn.innerHTML = "Convert";
-            currVal.setAttribute("placeholder",response + "Top");
-	return response.json()
-	})
+          currVal.style.fontSize = "11.4pt";
+          btn.innerHTML = "Convert";
+          currVal.setAttribute("placeholder",response + "Top");
+          return response.json()
+        })
         .then(data=>{
-          let currFrVal = parseFloat(cFroVal);
-          currVal.value = numeral(currFrVal * data[identifyMe].val).format("0,0.00[0]");
+          const currFrVal = parseFloat(cFroVal);
+
+          // console.log(currFrVal * data[identifyMe]);
+
+          currVal.value =numeral(currFrVal * data[identifyMe]).format("0,0.00[0]") +" "+ to ;
           
-          currVal.setAttribute("placeholder", "#Results");
+          // currVal.setAttribute("placeholder", "#Results");
           btn.innerHTML = "Convert";
           this.g('#save').click();
 
@@ -44,7 +46,7 @@ class CurrencyLater {
         .catch(e=>{
           btn.innerHTML = "Converting...";
           setTimeout(()=>{
-            currVal.style.fontSize = "6.4pt";
+            currVal.style.fontSize = "11.4pt";
             btn.innerHTML = "Convert";
             currVal.setAttribute("placeholder",e);
           },700);
@@ -131,7 +133,7 @@ class CurrencyLater {
 
           if (getBackUser) {
 
-            g("#acts").innerHTML += `<p class="rec">${getBackUser.value.currNum} ${getBackUser.value.currFR} to ${getBackUser.value.currTO} is : ${getBackUser.value.currVL} ${getBackUser.value.currTO}</p>`;
+            g("#acts").innerHTML += `<p class="rec">${getBackUser.value.currNum} ${getBackUser.value.currFR} to ${getBackUser.value.currTO} is : ${getBackUser.value.currVL} </p>`;
 
             getBackUser. continue (); 
           }
@@ -153,23 +155,22 @@ class CurrencyLater {
               e = self.g('#currency_To'),
               d = self.g('#currency_Val'),
               db = self.idb;
-
-          let rq = db.transaction("currencyUsed", "readwrite")
-                  .objectStore("currencyUsed")
-                    .add({
-                      currNum: n.value,
-                      currFR: p.value,
-                      currTO: e.value,
-                      currVL: d.value
-                    });
-
-          rq.onsuccess = function(evt) {
-            self.showcurrencyUsed(db)
-            .then((e)=>{
-              document.body.style.overflow = 'auto';
-            })
-
-                      };
+          setTimeout(()=>{
+            let rq  = db.transaction("currencyUsed", "readwrite")
+                      .objectStore("currencyUsed")
+                      .add({
+                        currNum: n.value,
+                        currFR: p.value,
+                        currTO: e.value,
+                        currVL: d.value
+                      });
+            rq.onsuccess = function(evt) {
+              self.showcurrencyUsed(db)
+              .then((e)=>{
+                document.body.style.overflow = 'auto';
+              })
+            };
+          },77)
           return false;
         });
         return self

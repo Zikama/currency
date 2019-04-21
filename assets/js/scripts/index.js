@@ -92,6 +92,11 @@ if('serviceWorker' in navigator){
   function v(val){
     document.getElementById("currencyFromValue").value+=val;
   }
+
+  function clearer(val){
+    let value = val;
+    document.getElementById("currencyFromValue").value = value
+  }
   function f(val){
     const ans = document.getElementById("currencyFromValue");
     ans.value = ans.value.substring(0,ans.value.length-1);
@@ -118,13 +123,13 @@ if('serviceWorker' in navigator){
          `<input type="button" class="bloc" readonly onclick="applyPopV(event)" value="${allCurrencies[i]}">`
       }
 
-    fetch("https://free.currencyconverterapi.com/api/v6/currencies?apiKey=b042c83a9cd4341475c3",{mode:'no-cors'}).then(data=>{
+    fetch("https://free.currencyconverterapi.com/api/v6/currencies?apiKey=b042c83a9cd4341475c3",{mode:'cors'}).then(data=>{
           return data.text()
     })
     .then(data =>{
       data = JSON.parse(data);
       data = data["results"];
-          console.log(data);
+
       for(let i=0; i<allCurrencies.length; i++){
         let select = currencySelect[0].options[i];
         if(select.value == "UGX"){
