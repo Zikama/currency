@@ -1,13 +1,13 @@
 {
   "name": "Currency Converter",
   "short_name": "Converter",
-  "scope": "./",
+  "start_url": "./",
   "icons": [{
-    "src": "./assets/imgs/logo.png",
-    "sizes": "600x600"
+    "src": "./assets/imgs/logo-s.png",
+    "sizes": "99x99"
   }],
   "background_color": "#cecece",
   "theme_color":"rgb(5, 54, 74)",
-  "display": "standalone",
-  "start_url": "./"
+  "scope": "./",
+  "display": "standalone"
 }

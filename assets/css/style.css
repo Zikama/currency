@@ -32,6 +32,10 @@ background: #22b3bb;
 	box-sizing: border-box;
 
 }
+html {
+    overflow-y: hidden;
+
+}
 body {
     background: #002838;
 
