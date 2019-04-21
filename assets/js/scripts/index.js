@@ -1,8 +1,8 @@
-
-      //Selector and etc
-      g=(k)=>document.querySelector(k);
-      gA=(k)=>document.querySelectorAll(k);
-      const indexController = new controller();
+// "strict mode"
+//Selector and etc
+const g=(k)=>document.querySelector(k),
+gA=(k)=>document.querySelectorAll(k);
+const indexController = new controller();
 
 function writer (data) {
   calc.currencyFromValue.value += data;
