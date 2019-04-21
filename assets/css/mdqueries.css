@@ -1,0 +1,327 @@
+
+
+input#no {
+    background: white;
+
+    color: inherit;
+
+}
+input#ok {
+    background: #0cc524;
+
+    color: #000000;
+    
+    border: 2px solid #0cc524;
+}
+input.btn {
+    border: 2px solid #0db1f3;
+
+    width: auto;
+
+    height: auto;
+
+     color: inherit;
+ 
+    border-radius: 5px;
+
+    padding: 5px 14px;
+
+    box-shadow: -5px 8px 19px -2px rgba(0, 0, 0, 0.2);
+
+    transition: .2s linear;
+
+}input.btn:hover{
+    box-shadow: -3px 7px 19px -1px rgba(0, 0, 0, 0.1);
+
+}
+.none{
+    display: none !important;
+}
+
+/*Media Queries*/
+@media screen and (min-width: 250px){
+	body,*{
+		overflow-x: hidden !important;
+
+	}nav p {
+        width: 70%;
+
+        font-weight: 100;
+
+        font-size: 20px;
+
+    }
+	div.menu{
+		display: inline-block;
+
+	}
+	div.card_f {
+		max-height: .1px;
+
+		position: fixed;
+
+    }
+    div.card_f p {
+        font-size: 14pt;
+
+    }
+    .recent {
+        width: inherit;
+
+    }
+    article.form ,article.recent1,article.recent2{
+      	margin: 5px;
+
+      	padding: 5px  0;
+
+      	box-sizing: border-box;
+
+      	width: 360px;
+
+    }
+    article.form {
+        order: 1;
+
+    }
+    article.recent1 {
+        order: 2;
+
+    }
+    article.recent2 {
+        order: 3;
+
+    }.sp {
+        max-width: 100px;
+
+        width: auto !important;
+
+        max-height: 50px;
+
+        height: auto;
+
+        padding: 5px 12px;
+
+        margin: 0 2px;
+
+        transition: .5s ease-in-out;
+
+    }.button {
+        width: 105px;
+
+        height: 42px;
+
+         font-weight: normal;
+ 
+    }#result, #clearbutton {
+        background: #e02727;
+
+        margin-left: 20px;
+
+    }.m_h h1 {
+        font-size: larger;
+
+    }
+}
+@media screen and (min-width: 560px){
+    nav p {
+        font-size: 18pt;
+
+        width: 21%;
+
+    }
+	div.menu{
+		display: none;
+
+	}
+	div.card_f {
+        overflow: hidden;
+
+        display: flex;
+
+        max-height: 41px;
+
+        width: 100%;
+
+        max-width: 100%;
+
+        margin: 0 -.95px -8.9px;
+
+        position: inherit;
+
+    }
+    div.card_f p {
+        display: unset !important;
+
+        width: unset !important;
+
+        font-size: inherit;
+
+    }.bloc,.bloc:hover {
+        margin: 0 2px;
+
+        padding: 0 50px;
+
+    }
+}
+@media screen and (min-width: 860px){
+    nav p {
+        font-size: 18pt;
+
+        width: 35%;
+
+    }
+	div.menu{
+		display: none;
+
+	}
+	div.card_f {
+        overflow: hidden;
+
+        display: flex;
+
+        height: auto;
+
+        width: 100%;
+
+        max-width: 78%;
+
+        margin: 0 -.95px -8.9px;
+    position: inherit;
+
+    }div.card_f p {
+        display: unset !important;
+
+        width: unset !important;
+
+        font-size: inherit;
+
+    }#currenciesToC{
+        width: 60%
+    }.bloc,.bloc:hover {
+        margin: 0 2px;
+
+    }
+    article.form {
+        order: 2;
+
+    }
+    article.recent1 {
+        order: 1;
+
+    }
+    article.recent2 {
+        order: 3;
+
+    }
+}
+@media screen and (min-width: 1261px) {
+    nav p {
+        font-size: 18pt;
+
+        width: 21%;
+
+    }
+	div.menu{
+		display: none;
+
+	}
+	div.card_f {
+        overflow: hidden;
+
+        display: flex;
+
+        height: auto;
+
+        width: 100%;
+
+        max-width: 70%;
+
+        margin: 0 -.95px -8.9px;
+    position: inherit;
+
+    }div.card_f p {
+        display: unset !important;
+
+        width: unset !important;
+
+        font-size: inherit;
+
+        margin: 0 56px 0 15px;
+
+    }#currenciesToC{
+        width: 68%
+    }.bloc,.bloc:hover {
+        margin: 0 2px;
+
+    }article.form {
+        order: 2;
+
+    }
+    article.recent1 {
+        order: 1;
+
+    }
+    article.recent2 {
+        order: 3;
+
+    }
+}
+@media screen and (min-width: 1262px)  {
+	body, * {
+        overflow-x: unset !important;
+ 
+    }
+    nav p {
+        font-size: 18pt;
+
+        width: 21%;
+
+    }
+	div.menu{
+		display: none;
+
+	}
+    div.card_f {
+        overflow: hidden;
+
+        display: flex;
+
+        height: auto;
+
+        width: 100%;
+
+        max-width: 79%;
+
+        margin: 0 -.195px -4.9px;
+
+        position: inherit;
+
+    }div.card_f p {
+        display: unset !important;
+
+        width: unset !important;
+
+        font-size: inherit;
+
+        margin: 0 16px 0 15px;
+
+    }#currenciesToC{
+        width: 69%
+    }.bloc,.bloc:hover {
+        margin: 0 2px;
+ /*padding: 0 0px;
+*/
+    } 
+    article.form {
+        order: 2;
+
+    }
+    article.recent1 {
+        order: 1;
+
+    }
+    article.recent2 {
+        order: 3;
+
+    }
+}

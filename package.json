@@ -1,12 +1,25 @@
 {
-  "name": "mws-c-converter",
+  "name": "CurrencyConverter",
   "version": "1.0.0",
   "description": "My 7Days of Coding Challenge",
-  "main": "new_sw.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zikama/currency.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Zikama/currency/issues"
+  },
+  "homepage": "https://github.com/Zikama/currency#readme",
+  "dependencies": {
+    "eslint": "^5.16.0",
+    "express": "^4.16.4"
+  }
 }
