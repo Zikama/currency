@@ -638,6 +638,11 @@ article.form {
 
 }
 
+.conv-tools {
+    display: grid;
+
+}
+
 #convt {
     color: #44006f;
 
@@ -651,7 +656,7 @@ article.form {
 
     outline: none;
 
-    margin: 5px;
+    margin: 5px auto;
 
     font-size: 29px;
 
@@ -676,6 +681,8 @@ article.form {
     background: #f8fafa;
 
     border: 1px solid #f1f1f1af;
+
+    display: none;
 
 }
 
