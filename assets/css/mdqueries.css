@@ -1,19 +1,19 @@
 
 
-input#no {
+#no {
     background: white;
 
-    color: inherit;
+    color: black;
 
 }
-input#ok {
+#ok {
     background: #0cc524;
 
     color: #000000;
     
     border: 2px solid #0cc524;
 }
-input.btn {
+.btn {
     border: 2px solid #0db1f3;
 
     width: auto;
@@ -30,7 +30,7 @@ input.btn {
 
     transition: .2s linear;
 
-}input.btn:hover{
+}.btn:hover{
     box-shadow: -3px 7px 19px -1px rgba(0, 0, 0, 0.1);
 
 }
@@ -121,6 +121,17 @@ input.btn {
         font-size: larger;
 
     }
+    svg.gb_he {
+        cursor: text;
+    }select, button, input:not([type="text"]) {
+        cursor: text;
+    }
+    .btn-num {
+        overflow: hidden;
+    }
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
 }
 @media screen and (min-width: 560px){
     nav p {
@@ -162,6 +173,17 @@ input.btn {
         padding: 0 50px;
 
     }
+    svg.gb_he {
+        cursor: text;
+    }
+    select, button, input:not([type="text"]) {
+        cursor: text;
+    }
+    .btn-num {
+        overflow: hidden;
+    }::-webkit-scrollbar {
+        width: 5px;
+    }
 }
 @media screen and (min-width: 860px){
     nav p {
@@ -186,7 +208,7 @@ input.btn {
         max-width: 78%;
 
         margin: 0 -.95px -8.9px;
-    position: inherit;
+        position: inherit;
 
     }div.card_f p {
         display: unset !important;
@@ -213,6 +235,15 @@ input.btn {
         order: 3;
 
     }
+    svg.gb_he {
+        cursor: pointer;
+    }
+    select, button, input:not([type="text"]) {
+        cursor: pointer;
+    }
+    .btn-num {
+        overflow: unset;
+    }
 }
 @media screen and (min-width: 1261px) {
     nav p {
@@ -237,7 +268,8 @@ input.btn {
         max-width: 70%;
 
         margin: 0 -.95px -8.9px;
-    position: inherit;
+
+        position: inherit;
 
     }div.card_f p {
         display: unset !important;
@@ -264,6 +296,16 @@ input.btn {
     article.recent2 {
         order: 3;
 
+    }
+    svg.gb_he {
+        cursor: pointer;
+    }
+    select, button, input:not([type="text"]) {
+        cursor: pointer;
+    }.btn-num {
+        overflow: unset;
+    }::-webkit-scrollbar {
+        width: 10px;
     }
 }
 @media screen and (min-width: 1262px)  {
@@ -309,8 +351,6 @@ input.btn {
         width: 69%
     }.bloc,.bloc:hover {
         margin: 0 2px;
- /*padding: 0 0px;
-*/
     } 
     article.form {
         order: 2;
@@ -323,5 +363,15 @@ input.btn {
     article.recent2 {
         order: 3;
 
+    }
+    svg.gb_he {
+        cursor: pointer;
+    }
+    select, button, input:not([type="text"]) {
+        cursor: pointer;
+    }.btn-num {
+        overflow: unset;
+    }::-webkit-scrollbar {
+        width: 10px;
     }
 }

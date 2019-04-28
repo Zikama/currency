@@ -314,13 +314,25 @@ article.form {
 
     line-height: 3.3125rem;
 
-    border: none;
-
     outline: none;
 
     box-shadow: 0 1px 0px rgba(0, 0, 0, 0), 0 1px 2px rgba(0, 0, 0, 0.08), inset 0 8px 22px rgba(0, 0, 0, 0.08);
 
-}#currenciesToC{
+    background: rgba(2, 6, 8, 0.16);
+
+    border: 1px solid rgba(120, 162, 177, 0.62);
+
+    border-left: 0;
+
+    border-right: 0;
+
+    color: rgba(221, 246, 255, 0.84);
+
+}
+option {
+    color: rgb(0, 0, 0);
+}
+#currenciesToC{
     display: flex;
 
     width: 69%;
@@ -488,8 +500,22 @@ article.form {
 
     border-radius: 2px 2px 0 0;
 
+    border: 1px solid #567c8a;
+
+    border-right: 0;
+
+    border-left: 0;
+
     cursor: text;
 
+    background: #213f4a;
+
+    color: aliceblue;
+
+}
+#searchActivity::placeholder {
+    color: #97b2b5;
+    font-size: 2pc;
 }
 .recent1_hide{
     max-height: 420px !important;
@@ -608,8 +634,6 @@ article.form {
     align-self: center;
 
 }#currencyFromValue {
-    height: 40px;
-
     padding: 5px 10px;
 
     width: 89%;
@@ -618,11 +642,34 @@ article.form {
 
     font-size: 28pt;
 
-    background: #f8fafa;
+    background: rgba(40, 59, 66, 0.55);
 
     border: 0;
 
-}#currency_Val {
+    color: azure;
+
+    border: 1px solid #587e8c;
+
+    border-left: 0;
+
+    border-right: 0;
+
+}#currencyFromValue::placeholder {
+    color: #97b2b5;
+
+    font-size: 2.8pc;
+
+    text-align: left;
+
+    font-weight: 700;
+
+}#currency_Val::placeholder {
+    color: #97b2b5;
+
+    font-size: 1.8pc;
+
+}
+#currency_Val {
     height: 40px;
 
     padding: 5px 10px;
@@ -633,9 +680,11 @@ article.form {
 
     font-size: 18pt;
 
-    background: #f8fafa;
+    background: #234552;
 
-    border: 0;
+    border: 1px solid #567c8a;
+
+    color: aliceblue;
 
 }
 
@@ -644,20 +693,20 @@ article.form {
 
 }
 
-#convt {
-    color: #44006f;
+#convt {    
+    color: #82ff92;
 
-    background-color: #f8fafa;
+    background-color: hsl(197, 36%, 25%);
 
-    border: 1px solid #f1f1f1af;
+    border: 1px solid rgba(0, 141, 148, 0.77);
 
     border-radius: 10px;
 
-    padding: 10px;
+    padding: 10px 45px;
 
     outline: none;
 
-    margin: 5px auto;
+    margin: 12px auto;
 
     font-size: 29px;
 
@@ -709,7 +758,7 @@ article.form {
 
     background: transparent;
 
-    color: #0db1f3;
+    color: #8bff8d;
 
     font-size: 50pt;
 
@@ -721,7 +770,17 @@ article.form {
 
     position: relative;
 
-    user-select: none;
+    overflow: hidden;
+
+    -webkit-user-select: none;
+
+       -moz-user-select: none;
+
+        -ms-user-select: none;
+
+         -o-user-select: none;
+
+            user-select: none;
 
 }.btn-dot {
     width: auto;
@@ -738,20 +797,21 @@ article.form {
 
 }.btn-num:after {
     content: "";
-
     background: hsla(60, 100%, 77%, 0.38);
 
     display: block;
 
     position: absolute;
 
-    padding-top: 20px;
-
-    padding-left: 24px;
+    padding: 20px;
 
     margin-left: -24px;
 
-    margin-top: -20px;
+    margin-top: -24px;
+
+    margin-bottom: -24px;
+
+    margin-right: -24px;
 
     top: 0;
 
@@ -765,6 +825,8 @@ article.form {
 
     opacity: 0;
 
+    pointer-events: none;
+
     -webkit-transition: all .8s;
 
        -moz-transition: all .8s;
@@ -772,10 +834,9 @@ article.form {
         -ms-transition: all .8s;
 
          -o-transition: all .8s;
-
-          transition: all .8s;
-
-}.btn-num:active:after {
+            transition: all .8s;
+}
+.btn-num:active:after {
     padding: 0;
 
     margin: 20px;
