@@ -235,17 +235,12 @@ svg.gb_he {
  	
 }#acts {
     width: 100%;
-
-    background: rgba(255, 255, 255, .8);
-
+    background: rgba(255, 255, 255, .16);
     text-align: center;
-
     max-height: 65vh;
-
     overflow-y: auto;
-
     padding-bottom: 10px;
-
+    color: #dbf3fd;
 }#acts::-webkit-scrollbar {
     width: 10px;
 
@@ -509,23 +504,25 @@ article.form {
 }
 .recent {
     width: 400px;
-
+    
     max-height: 800px;
-
+    
     overflow-wrap: break-word;
-
+    
     overflow-y: scroll;
-
+    
     text-align: center;
-
-    background-color: rgba(255, 255, 255, .9);
-
+    
+    background-color: rgba(255, 255, 255, .16);
+    
     border-radius: .1875rem;
-
+    
     box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
-
+    
     border: 1px solid rgba(0, 0, 0, .12);
-
+    
+    color: #dbf3fd;
+    
 }.recent * {
     font-size: 15pt;
 
