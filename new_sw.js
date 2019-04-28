@@ -1,6 +1,6 @@
 //Initializing Service Worker.   
 
-  const cacheName = "V6",sw = "Service Worker: ";
+  const cacheName = "V7",sw = "Service Worker: ";
   self.addEventListener("install",e=>{
   });//Activate  
   self.addEventListener("activate",e=>{
